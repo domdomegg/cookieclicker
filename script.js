@@ -1,5 +1,6 @@
 // Find the cookieQuantity field
 e_cookieQuantity = document.getElementById('cookieQuantity');
+e_cookieQuantity_under = document.getElementById('cookieQuantity_under');
 
 // Start with 0 cookies
 var cookies = 0;
@@ -14,5 +15,10 @@ function cookieClick() {
 
 // Display cookies
 function displayCookies() {
+    if(cookies == 1) {
+        e_cookieQuantity_under.innerHTML = "cookie";
+    } else {
+        e_cookieQuantity_under.innerHTML = "cookies";
+    }
     e_cookieQuantity.innerHTML = cookies;
 }
