@@ -1,0 +1,26 @@
+html {
+    height: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#cookieQuantity {
+    font-size: 600%;
+}
+
+img#cookie {
+    cursor: pointer;
+    width: 100%;
+    max-width: 640px;
+    transition: width 0.05s;
+    margin: 0 auto;
+}
+
+img#cookie:active {
+    width: 98%;
+    max-width: 630px;
+}
