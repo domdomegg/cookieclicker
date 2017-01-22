@@ -1,11 +1,38 @@
-html {
-    height: 100%;
+body {
+    vertical-align: top;
 }
 
-.container {
+#main_container {
     width: 80%;
     margin: 0 auto;
+}
+
+p {
+    margin: 0;
+}
+
+
+/* Title */
+
+header {
+    border-bottom: 1vh solid #eee;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+
+/* Cookie */
+
+#cookie_container {
+    width: 46%;
+    margin: 0;
+    padding: 2%;
     text-align: center;
+    display: inline-block;
+    float: left
 }
 
 #cookieQuantity {
@@ -16,11 +43,64 @@ img#cookie {
     cursor: pointer;
     width: 100%;
     max-width: 640px;
-    transition: width 0.05s;
-    margin: 0 auto;
+    transition: all 0.05s;
+    margin: 40px auto 0 auto;
 }
 
 img#cookie:active {
     width: 98%;
     max-width: 630px;
+}
+
+
+/* Shop */
+
+#shop_container {
+    width: 50%;
+    margin: 0;
+    display: inline-block;
+    float: right;
+}
+
+#shop_container ul {
+    list-style-type: none;
+    padding: 0 1vw;
+}
+
+.product {
+    background-color: #8BC34A;
+    margin-bottom: 1vw;
+    padding: 1.5vw;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.1s;
+    font-weight: bold;
+}
+
+.product:hover {
+    background-color: #689F38;
+}
+
+.product:active {
+    background-color: #9CCC65;
+}
+
+.product .product_title {
+    font-size: 30px;
+}
+
+.product .product_cps {
+    font-weight: normal;
+}
+
+.product .product_price {
+    font-size: 20px;
+    background-image: url("cookie_icon.svg");
+    background-repeat: no-repeat;
+    padding-left: 26px;
+}
+
+.product .product_owned {
+    float: right;
+    font-size: 50px;
 }

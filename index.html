@@ -8,11 +8,33 @@
 </head>
 
 <body>
-	<div class="container">
-		<p>You have</p>
-		<span id="cookieQuantity">0</span>
-		<p id="cookieQuantity_under">cookies</p>
-		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Pepperidge-Farm-Nantucket-Cookie.jpg/640px-Pepperidge-Farm-Nantucket-Cookie.jpg" alt="Cookie" id="cookie" onclick="cookieClick(); return false" />
+	<div id="main_container">
+		<header>
+			<h1>Cookie Clicker</h1>
+		</header>
+		<div id="cookie_container">
+			<p id="cookieQuantity">0</p>
+			<p id="cookieQuantity_under">cookies</p>
+			<img src="large_cookie.png" alt="Cookie" id="cookie" onclick="cookieClick(); return false" />
+		</div>
+		<div id="shop_container">
+			<ul>
+				<li class="product">
+					<p class="product_owned">3</p>
+					<img src="" alt="" class="product_image">
+					<p class="product_title"><span class="product_name">Cursor</span> <span class="product_cps">(0.1 cps)</span></p>
+					<p class="product_price">10</p>
+				</li>
+
+
+				<li class="product">
+					<img src="" alt="" class="product_image">
+					<p class="product_title"><span class="product_name"></span> <span class="product_cps"></span></p>
+					<p class="product_price"></p>
+					<p class="product_owned"></p>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<script type="text/javascript" src="script.js"></script>
 </body>

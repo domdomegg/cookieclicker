@@ -20,5 +20,5 @@ function displayCookies() {
     } else {
         e_cookieQuantity_under.innerHTML = "cookies";
     }
-    e_cookieQuantity.innerHTML = cookies;
+    e_cookieQuantity.innerHTML = cookies.toLocaleString();
 }
