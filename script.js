@@ -44,7 +44,7 @@ function addStoreOption(storeOption) {
 storeOptions["1"] = {
     id: 1,
     product_owned: 3,
-    image_src: "cursor.svg",
+    image_src: "img/cursor.svg",
     product_name: "Cursor",
     product_cps: 0.1,
     product_price: 10
