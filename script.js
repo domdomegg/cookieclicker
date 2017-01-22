@@ -1,6 +1,10 @@
-// Find the cookieQuantity field
+// Get various elements from the DOM
+e_cookie = document.getElementById('cookie');
 e_cookieQuantity = document.getElementById('cookieQuantity');
 e_cookieQuantity_under = document.getElementById('cookieQuantity_under');
+
+// Create eventlistener on cookie
+e_cookie.addEventListener('click', cookieClick);
 
 // Start with 0 cookies
 var cookies = 0;
