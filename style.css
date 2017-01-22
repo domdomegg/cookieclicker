@@ -62,7 +62,7 @@ img#cookie:active {
     float: right;
 }
 
-#shop_container ul {
+#shop_container ul#products {
     list-style-type: none;
     padding: 0 1vw;
 }
@@ -85,12 +85,18 @@ img#cookie:active {
     background-color: #9CCC65;
 }
 
-.product .product_title {
-    font-size: 30px;
+.product .product_image, .product .product_text {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.product .product_cps {
+.product .product_title {
+    font-size: 30px;
     font-weight: normal;
+}
+
+.product .product_name {
+    font-weight: bold;
 }
 
 .product .product_price {
