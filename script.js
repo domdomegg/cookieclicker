@@ -24,13 +24,16 @@ function cookieClick() {
 // Display cookies
 function displayCookies() {
     // Check plurals
-    if(cookies == 1) {
+    if(Math.floor(cookies) == 1) {
         e_cookieQuantity_under.innerHTML = 'cookie';
     } else {
         e_cookieQuantity_under.innerHTML = 'cookies';
     }
     // Show number of cookies, always with 1 decimal place
     e_cookieQuantity.innerHTML = Math.floor(cookies).toLocaleString();
+
+    // Update the title to match
+    document.title = Math.floor(cookies).toLocaleString() + " " + e_cookieQuantity_under.innerHTML + " - Cookie Clicker";
 }
 
 // Adds items to the store
