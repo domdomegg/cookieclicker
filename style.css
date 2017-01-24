@@ -69,12 +69,13 @@ img#cookie:active {
 
 .product {
     background-color: #8BC34A;
-    margin-bottom: 1vw;
-    padding: 1.5vw;
+    margin-top: 60px;
+    padding: 15px;
     cursor: pointer;
     color: #fff;
-    transition: all 0.1s;
+    transition: all 0.3s;
     font-weight: bold;
+    height: 60px;
 }
 
 .product:hover {
@@ -85,17 +86,25 @@ img#cookie:active {
     background-color: #9CCC65;
 }
 
-.product .product_image, .product .product_text {
-    display: inline-block;
+.product .product_image {
+    position: relative;
+    top: -30px;
+    height: 120px;
     margin-right: 10px;
 }
 
+.product .product_image, .product .product_text {
+    display: inline-block;
+    vertical-align: top;
+}
+
 .product .product_title {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: normal;
 }
 
 .product .product_name {
+    font-size: 30px;
     font-weight: bold;
 }
 

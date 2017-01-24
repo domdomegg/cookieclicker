@@ -36,9 +36,9 @@ function displayCookies() {
 // Adds items to the store
 function addStoreOption(storeOption) {
     // Create long string of HTML code that represents a product. Fills in with details from storeOption object where appropriate.
-    var s = "<li class='product' id='" + storeOption.id + "'' onclick='purchaseStoreOption(" + storeOption.id + ")'>" +
+    var s = "<li class='product' id='" + storeOption.id + "' onclick='purchaseStoreOption(" + storeOption.id + ")'>" +
             "<p class='product_owned'>" + ((storeOption.product_owned === 0) ? "" : storeOption.product_owned) + "</p>" +
-            "<img src='" + storeOption.image_src + "' alt='" + storeOption.product_name +"' class='product_image'  width='50px' height='50px'>" +
+            "<img src='" + storeOption.image_src + "' alt='" + storeOption.product_name +"' class='product_image'>" +
             "<div class='product_text'>" +
             "<p class='product_title'><span class='product_name'>" + storeOption.product_name + "</span> (<span class='product_cps'>" + storeOption.product_cps.toLocaleString() + "</span> cps)</p>" +
             "<p class='product_price'>" + storeOption.product_price.toLocaleString() + "</p></li>" +
@@ -87,23 +87,23 @@ storeOptions = {
         id: 1,
         product_owned: 0,
         image_src: "img/cursor.svg",
-        product_name: "Meh cursor",
+        product_name: "Cursor",
         product_cps: 0.1,
         product_price: 10
     },
     2: {
         id: 2,
         product_owned: 0,
-        image_src: "img/cursor.svg",
-        product_name: "Better cursor",
+        image_src: "img/oven.svg",
+        product_name: "Oven",
         product_cps: 1.5,
         product_price: 100
     },
     3: {
         id: 3,
         product_owned: 0,
-        image_src: "img/cursor.svg",
-        product_name: "Best cursor",
+        image_src: "img/chef.svg",
+        product_name: "Chef",
         product_cps: 20,
         product_price: 1000
     }
