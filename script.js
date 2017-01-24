@@ -30,7 +30,7 @@ function displayCookies() {
         e_cookieQuantity_under.innerHTML = 'cookies';
     }
     // Show number of cookies, always with 1 decimal place
-    e_cookieQuantity.innerHTML = cookies.toLocaleString(undefined, { maximumFractionDigits: 1, minimumFractionDigits: 1 });
+    e_cookieQuantity.innerHTML = Math.floor(cookies).toLocaleString();
 }
 
 // Adds items to the store
