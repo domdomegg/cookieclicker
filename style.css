@@ -1,5 +1,6 @@
 body {
     vertical-align: top;
+    user-select: none;
 }
 
 #main_container {
