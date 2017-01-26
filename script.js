@@ -11,15 +11,34 @@ e_cookie.addEventListener('click', cookieClick);
 // Initialise variables
 var cookies = 0;
 var cps = 0;
+var cookiesPerClick = 1;
 var ticksPerSecond = 10;
 var storeOptions = {};
 
 // User clicks the giant cookie
-function cookieClick() {
+function cookieClick(e) {
+    // Prevent default
+    e.preventDefault();
+
     // They get a cookie
-    cookies++;
+    cookies += cookiesPerClick;
     // Show them how many cookies they have
     displayCookies();
+
+    // Create div showing cookie earnered
+    var div = document.createElement("div");
+    div.className = "click_feedback";
+    div.style.left = e.clientX + "px";
+    div.style.top = e.clientY + "px";
+    div.innerHTML = "+" + cookiesPerClick;
+
+    // Add the newly created div to the body
+    document.body.appendChild(div);
+
+    // Remove the div after the CSS animation has played
+    setTimeout(function() {
+        document.body.removeChild(div);
+    }, 2500);
 }
 
 // Display cookies
@@ -42,7 +61,7 @@ function addStoreOption(storeOption) {
     // Create long string of HTML code that represents a product. Fills in with details from storeOption object where appropriate.
     var s = "<li class='product' id='" + storeOption.id + "' onclick='purchaseStoreOption(" + storeOption.id + ")'>" +
             "<p class='product_owned'>" + ((storeOption.product_owned === 0) ? "" : storeOption.product_owned) + "</p>" +
-            "<img src='" + storeOption.image_src + "' alt='" + storeOption.product_name +"' class='product_image'>" +
+            "<img src='" + storeOption.image_src + "' alt='" + storeOption.product_name +"' class='product_image' draggable='false' />" +
             "<div class='product_text'>" +
             "<p class='product_title'><span class='product_name'>" + storeOption.product_name + "</span> (<span class='product_cps'>" + storeOption.product_cps.toLocaleString() + "</span> cps)</p>" +
             "<p class='product_price'>" + storeOption.product_price.toLocaleString() + "</p></li>" +
