@@ -2,6 +2,7 @@
 e_cookie = document.getElementById('cookie');
 e_cookieQuantity = document.getElementById('cookieQuantity');
 e_cookieQuantity_under = document.getElementById('cookieQuantity_under');
+e_cookieCps = document.getElementById('cookieCps');
 e_products = document.getElementById('products');
 
 // Create eventlistener on cookie
@@ -75,6 +76,9 @@ function calculateCps() {
         // For each product, total cps = number owned * cps of one
         cps += storeOptions[keys[i]].product_owned * storeOptions[keys[i]].product_cps;
     }
+
+    // Display cps
+    e_cookieCps.innerHTML = cps.toLocaleString(undefined, {minimumFractionDigits: 1, maximumFractionDigits: 1});
 }
 
 // Every tick, update the number of cookies and display it
