@@ -30,7 +30,7 @@ header h1 {
 #cookie_container {
     width: 46%;
     margin: 0;
-    padding: 2%;
+    padding: 2% 2% 0 2%;
     text-align: center;
     display: inline-block;
     float: left
